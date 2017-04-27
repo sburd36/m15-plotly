@@ -1,0 +1,21 @@
+---
+title: "index.Rmd"
+output: html_document
+---
+
+``` {}
+library(plotly)
+
+data <- mtcars[which(mtcars$am == 1 & mtcars$gear == 4),]
+
+t <- list(
+  family = "sans serif",
+  size = 14,
+  color = toRGB("grey50"))
+
+p <- plot_ly(data, x = ~wt, y = ~mpg, text = rownames(data)) %>%
+  add_markers() %>%
+  add_text(textfont = t, textposition = "top right") %>%
+  layout(xaxis = list(range = c(1.6, 3.2)),
+         showlegend = FALSE)
+```
