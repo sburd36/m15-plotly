@@ -3,7 +3,7 @@ title: "index.Rmd"
 output: html_document
 ---
 
-``` {}
+``` {r}
 library(plotly)
 
 data <- mtcars[which(mtcars$am == 1 & mtcars$gear == 4),]
@@ -18,4 +18,5 @@ p <- plot_ly(data, x = ~wt, y = ~mpg, text = rownames(data)) %>%
   add_text(textfont = t, textposition = "top right") %>%
   layout(xaxis = list(range = c(1.6, 3.2)),
          showlegend = FALSE)
+
 ```

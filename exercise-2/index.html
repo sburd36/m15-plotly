@@ -120,9 +120,20 @@ $(document).ready(function () {
 </div>
 
 
-<pre><code>library(plotly)
-
-data &lt;- mtcars[which(mtcars$am == 1 &amp; mtcars$gear == 4),]
+<pre class="r"><code>library(plotly)</code></pre>
+<pre><code>## Loading required package: ggplot2</code></pre>
+<pre><code>## 
+## Attaching package: 'plotly'</code></pre>
+<pre><code>## The following object is masked from 'package:ggplot2':
+## 
+##     last_plot</code></pre>
+<pre><code>## The following object is masked from 'package:stats':
+## 
+##     filter</code></pre>
+<pre><code>## The following object is masked from 'package:graphics':
+## 
+##     layout</code></pre>
+<pre class="r"><code>data &lt;- mtcars[which(mtcars$am == 1 &amp; mtcars$gear == 4),]
 
 t &lt;- list(
   family = &quot;sans serif&quot;,
